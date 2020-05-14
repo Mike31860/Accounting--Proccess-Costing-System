@@ -1,0 +1,26 @@
+<div>
+  <div id="title">
+    <h2>Agregar una Tasa CIF!</h2>
+  </div>
+  <div id="order-form">
+    <form [formGroup]="cifForm">
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Valor Tasa CIF</mat-label>
+          <input
+            placeholder="Agrega la Tasa CIF"
+            formControlName="valorI"
+            type="number"
+            class="sin-prefijo"
+            matInput
+          />
+          <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+
+        <button (click)="createCif()" mat-raised-button>
+          Crea la Tasa Cif
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

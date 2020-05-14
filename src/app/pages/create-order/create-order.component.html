@@ -1,0 +1,70 @@
+<div>
+  <div id="title">
+    <h2>Crea la orden!</h2>
+  </div>
+  <div id="order-form">
+    <form [formGroup]="orderForm">
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Mano de obra directa</mat-label>
+          <input
+            placeholder="Introduce la mano de obra"
+            formControlName="manoDeObra"
+            type="number"
+            class="sin-prefijo"
+            matInput
+          />
+          <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Material directo</mat-label>
+          <input
+            placeholder="Introduce la material directo"
+            formControlName="materialDirecto"
+            type="number"
+            class="sin-prefijo"
+            matInput
+          />
+          <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Costos indirectos de fabricacion</mat-label>
+          <input
+            placeholder="Introduce los costos indirectos de fabricacion"
+            formControlName="cif"
+            type="number"
+            class="sin-prefijo"
+            matInput
+          />
+          <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Base de Asignacion Real</mat-label>
+          <input
+            placeholder="Introduce la base de asignacion presupuestada"
+            formControlName="baseAsignacion"
+            type="number"
+            class="sin-prefijo"
+            matInput
+          />
+          <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Elige el mes de la orden</mat-label>
+          <input
+            matInput
+            formControlName="orderDate"
+            [matDatepicker]="picker"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <button (click)="createOrder()" mat-raised-button>Crea la orden</button>
+      </div>
+    </form>
+  </div>
+</div>

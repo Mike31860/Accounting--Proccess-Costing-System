@@ -1,0 +1,56 @@
+<div id="main-container">
+  <table mat-table [dataSource]="cifs" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="valorI">
+      <th mat-header-cell *matHeaderCellDef>Tasa Cif</th>
+      <td mat-cell *matCellDef="let element">
+        <div>
+          {{ element.valorI | currency }}
+        </div>
+        <div>
+          <button
+            (click)="add('tasa cif', element, 'valorI')"
+            mat-raised-button
+            color="primary"
+          >
+            Editar
+            <!-- <mat-icon matSuffix>attach_money</mat-icon> -->
+          </button>
+
+          <button
+          
+          (click)="elegir('tasa cif',  element, 'valorI')"
+          mat-raised-button
+          color="primary"
+        >
+          Elegir
+          <!-- <mat-icon matSuffix>attach_money</mat-icon> -->
+        </button>
+
+        <button
+          (click)="substract('tasa Cif', element, 'valorId')"
+          mat-raised-button
+          color="primary"
+        >
+          Eliminar
+          <!-- <mat-icon matSuffix>attach_money</mat-icon> -->
+        </button>
+        </div>
+      </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

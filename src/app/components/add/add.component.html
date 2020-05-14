@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Agregar {{ data.propiedad }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="addForm">
+    <p>Introduce la cantidad de {{ data.propiedad }} que deseas agregar</p>
+    <mat-form-field>
+      <mat-label>{{ data.propiedad }}</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="quantity"
+        class="prefijo"
+      />
+      <span matPrefix>$&nbsp;</span>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" [mat-dialog-close]="0">
+    No Thanks
+  </button>
+  <button mat-button [mat-dialog-close]="quantity" cdkFocusInitial>
+    Ok
+  </button>
+</div>

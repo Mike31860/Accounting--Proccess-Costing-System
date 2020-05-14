@@ -1,0 +1,38 @@
+<div>
+    <div id="title">
+      <h2>Agregar un nuevo CIF Real!</h2>
+    </div>
+    <div id="order-form">
+      <form [formGroup]="cifRealForm">
+        <div class="example-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Descripcion</mat-label>
+                <input
+                  placeholder="Introduce la Descripcion de lo que queire agregar"
+                  formControlName="Description"
+                  type="text"
+                  class="sin-prefijo"
+                  matInput
+                />
+               
+              </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Valor Tasa Real CIF</mat-label>
+            <input
+              placeholder="Agrega la Tasa CIF"
+              formControlName="valorI"
+              type="number"
+              class="sin-prefijo"
+              matInput
+            />
+            <mat-icon matSuffix>attach_money</mat-icon>
+          </mat-form-field>
+  
+          <button (click)="createCifReal()" mat-raised-button>
+            Agregar Cif Real
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,35 @@
+* {
+  font-size: 15px;
+  width: 100%;
+}
+
+mat-toolbar {
+  span {
+    width: 120px;
+  }
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+  color: white;
+  background-color: lightslategrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  div {
+    margin-left: 20px;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    button[mat-stroked-button] {
+      width: auto;
+      font-size: 10px;
+      margin: 8px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    #last {
+      justify-self: flex-end;
+    }
+  }
+}

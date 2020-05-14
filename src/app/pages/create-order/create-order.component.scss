@@ -1,0 +1,40 @@
+div {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: lightskyblue;
+  padding-top: 10px;
+  #title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      color: white;
+    }
+    height: auto;
+  }
+  #order-form {
+    mat-form-field {
+      width: 100%;
+      color: white;
+      input[matInput] {
+        height: 20px;
+      }
+    }
+    button[mat-raised-button] {
+      width: 100%;
+    }
+  }
+}
+input.sin-prefijo::-webkit-outer-spin-button,
+input.sin-prefijo::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.sin-prefijo {
+  -moz-appearance: textfield;
+}

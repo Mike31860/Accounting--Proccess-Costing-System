@@ -1,0 +1,12 @@
+.prefijo {
+  text-align: right;
+}
+
+input.prefijo::-webkit-outer-spin-button,
+input.prefijo::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.prefijo {
+  -moz-appearance: textfield;
+}
